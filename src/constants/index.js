@@ -197,7 +197,7 @@ import {
   ];
 
   export const CONTACT = {
-    address: "Denver, CO, USA ",
+    address: "United of States of America",
     phoneNo: "+1 720 691 9549 ",
     email: "srinath1997.gr@gmail.com",
   };

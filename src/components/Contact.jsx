@@ -17,7 +17,7 @@ const Contact = () => {
       >
       <p className={styles.sectionHeadText}>Get in touch</p>
       <div className="text-center tracking-tighter">
-        <p className="my-4">{CONTACT.address}</p>
+        {/* <p className="my-4">{CONTACT.address}</p> */}
         <p className="my-4">{CONTACT.phoneNo}</p>
         <a href="#" className="border-b">
           {CONTACT.email}
