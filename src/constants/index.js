@@ -11,6 +11,13 @@ import {
     UCD1,
     BIT,
   } from "../assets";
+  import { RiReactjsLine } from "react-icons/ri";
+import { SiMongodb, SiPython, SiHtml5, SiCss3, SiDocker, SiKubernetes, SiSpringboot, SiMysql, SiRedux, SiNextdotjs, SiFlask } from "react-icons/si";
+import { DiJava, DiJavascript1, DiRedis } from "react-icons/di";
+import { FaNodeJs, FaAws } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { TbBrandTypescript } from "react-icons/tb";
+import { SiJenkins, SiApachekafka,  SiApachespark } from "react-icons/si";
   
   export const navLinks = [
     {
@@ -42,20 +49,20 @@ import {
   
   const services = [
     {
-      title: "Software Engineer",
+      title: "Software Development",
       icon: web,
     },
     {
-      title: "Full stack Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
+      title: "Cloud Knowledge",
       icon: backend,
     },
     {
-      title: "Data Science",
+      title: "Data Engineering/Data Science",
       icon: creator,
+    },
+    {
+      title: "Full Stack Engineer",
+      icon: mobile,
     },
   ];
   
@@ -160,7 +167,7 @@ import {
         },
       ],
       image: project3,
-      source_code_link: "https://github.com/srinath1997gr?tab=repositories",
+      source_code_link: "https://github.com/srinath1997gr/Protein-NLP-Analysis",
     },
   ];
   
@@ -200,6 +207,43 @@ import {
     address: "United of States of America",
     phoneNo: "+1 720 691 9549 ",
     email: "srinath1997.gr@gmail.com",
+    linkedin: "https://www.linkedin.com/in/srinath-g-r/",
+    github: "https://github.com/srinath1997gr",
+  };
+
+ export const categories = {
+    languages: [
+      { Icon: DiJava, name: "Java", color: "text-red-600" },
+      { Icon: DiJavascript1, name: "JavaScript", color: "text-yellow-500" },
+      { Icon: TbBrandTypescript, name: "TypeScript", color: "text-blue-500" },
+      { Icon: SiPython, name: "Python", color: "text-yellow-400" },
+      { Icon: SiHtml5, name: "HTML", color: "text-orange-500" },
+      { Icon: SiCss3, name: "CSS", color: "text-blue-400" },
+    ],
+    frameworks: [
+      { Icon: SiSpringboot, name: "Spring Boot", color: "text-green-600" },
+      { Icon: RiReactjsLine, name: "React", color: "text-cyan-400" },
+      { Icon: FaNodeJs, name: "Express", color: "text-green-500" },
+      { Icon: SiNextdotjs, name: "Next.js", color: "text-black" },
+      { Icon: SiFlask, name: "Flask", color: "text-gray-500" },
+      { Icon: SiRedux, name: "Redux", color: "text-purple-600" },
+    ],
+    Database: [
+      { Icon: SiMysql, name: "MySQL", color: "text-blue-600" },
+      { Icon: BiLogoPostgresql, name: "PostgreSQL", color: "text-sky-700" },
+      { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
+    ],
+    cloud: [
+      { Icon: FaAws, name: "AWS", color: "text-orange-400" },
+      { Icon: SiDocker, name: "Docker", color: "text-blue-400" },
+      { Icon: SiKubernetes, name: "Kubernetes", color: "text-blue-600" },
+      { Icon: SiJenkins, name: "Jenkins", color: "text-red-500" },
+    ],
+    other: [
+      { Icon: SiApachekafka, name: "Kafka", color: "text-purple-600" },
+      { Icon: DiRedis, name: "Redis", color: "text-red-400" },
+      { Icon: SiApachespark, name: "Spark", color: "text-orange-500" },
+    ],
   };
 
   export { services,  experiences,  projects };

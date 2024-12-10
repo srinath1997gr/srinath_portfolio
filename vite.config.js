@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/srinath_portfolio/', 
   build: {
-    outDir: 'build', // Change output directory to 'build'
+    outDir: 'build', 
   },
 })

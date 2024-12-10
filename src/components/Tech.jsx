@@ -1,62 +1,45 @@
-import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiPython, SiHtml5, SiCss3, SiDocker, SiKubernetes, SiSpringboot, SiMysql } from "react-icons/si";
-import { DiJava } from "react-icons/di"; 
-import { FaNodeJs, FaAws } from "react-icons/fa"; 
-import { BiLogoPostgresql } from "react-icons/bi";
+
 import { SectionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motion";
 import { styles } from "../styles";
+import { categories } from "../constants";
 
 const Tech = () => {
   return (
-      <motion.div
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
+    <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className='flex-[1.0] p-8 rounded-2xl'
       >
-      <h2 className={`${styles.sectionHeadText}`}>Technologies</h2>
+      <p className={`${styles.sectionHeadText} text-center`}>Technologies</p>
+      {Object.entries(categories).map(([category, items]) => (
+         <div
+         className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+       >
+        <motion.div
+          variants={slideIn("left", "tween", 0.7, 1)}
+            className='flex-[1.0]  rounded-2xl'
+        >
+        <div key={category} className="mb-8">
+          <h3 className="text-2xl font-bold text-white mb-4 capitalize">{category}</h3>
+          <div className="flex flex-wrap items-center justify-center gap-6">
+            {items.map(({ Icon, name, color }) => (
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <div>
-          <RiReactjsLine className="text-7xl text-cyan-400" />
+              <div key={name} className="flex flex-col items-center">
+                <Icon className={`text-7xl ${color}`} />
+                <span className="text-white mt-2">{name}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="p-4">
-          <SiMongodb className="text-7xl text-cyan-500" />
+        </motion.div>
         </div>
-        <div className="p-4">
-          <FaNodeJs className="text-7xl text-green-500" />
-        </div>
-        <div className="p-4">
-          <BiLogoPostgresql className="text-7xl text-sky-700" />
-        </div>
-        <div className="p-4">
-          <SiPython className="text-7xl text-yellow-500" />
-        </div>
-        <div className="p-4">
-          <DiJava className="text-7xl text-red-600" /> 
-        </div>
-        <div className="p-4">
-          <SiHtml5 className="text-7xl text-orange-500" />
-        </div>
-        <div className="p-4">
-          <SiCss3 className="text-7xl text-blue-500" />
-        </div>
-        <div className="p-4">
-          <SiDocker className="text-7xl text-blue-400" />
-        </div>
-        <div className="p-4">
-          <SiKubernetes className="text-7xl text-blue-600" />
-        </div>
-        <div className="p-4">
-          <FaAws className="text-7xl text-orange-400" /> 
-        </div>
-        <div className="p-4">
-          <SiSpringboot className="text-7xl text-green-600" />
-        </div>
-        <div className="p-4">
-          <SiMysql className="text-7xl text-blue-600" /> 
-        </div>
-      </div>
-      </motion.div>
+      ))}
+    </motion.div>
+    </div>
   );
 };
 

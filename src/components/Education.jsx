@@ -1,14 +1,26 @@
 import { Education } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
+import { motion } from "framer-motion";
+import { slideIn } from "../utils/motion";
 
 
 const Educations = () => {
   return (
-    <>
-      <p className={styles.sectionHeadText}>Education</p>
+    <div
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    >
+    <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className='flex-[1.0] p-8 rounded-2xl'
+      >
+      <p className={`${styles.sectionHeadText} text-center`}>Education</p>
       <div>
         {Education.map((edu, index) => (
+          <motion.div
+              variants={slideIn("left", "tween", 0.7, 1)}
+              className='flex-[1.0] p-8 rounded-2xl'
+            >
           <div
             key={index}
             className="mb-8 flex flex-col sm:flex-row justify-between sm:gap-10"
@@ -49,9 +61,11 @@ const Educations = () => {
               </div>
             </div>
           </div>
+          </motion.div>
         ))}
       </div>
-    </>
+      </motion.div>
+      </div>
   );
 };
 
